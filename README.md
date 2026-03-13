@@ -112,6 +112,68 @@ flowchart LR
 - `metrics:update`: emitted every 2 seconds.
 - `metrics:refresh`: client-triggered refresh request.
 
+## Docker Setup (Recommended)
+
+DevPulse includes Docker support for easy deployment and development.
+
+### Prerequisites
+- Docker Engine 20.10+
+- Docker Compose 2.0+
+
+### Quick Start with Docker
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/Maheshwarikponnan/dev-pulse.git
+cd dev-pulse
+```
+
+2. **Start all services:**
+```bash
+docker-compose up -d
+```
+
+3. **Access the application:**
+- Frontend: http://localhost
+- Backend API: http://localhost:3001
+- MongoDB: localhost:27017
+
+4. **View logs:**
+```bash
+docker-compose logs -f
+```
+
+5. **Stop services:**
+```bash
+docker-compose down
+```
+
+### Docker Services
+
+- **frontend**: React dashboard served by Nginx
+- **backend**: Node.js API with Socket.io
+- **mongodb**: MongoDB database with authentication
+
+### Development with Docker
+
+For development with hot reloading:
+
+```bash
+# Run only backend and database
+docker-compose up -d mongodb backend
+
+# Run frontend locally
+cd frontend && npm run dev
+```
+
+### Production Deployment
+
+The Docker setup is production-ready with:
+- Multi-stage builds for optimized images
+- Health checks for all services
+- Proper security configurations
+- Nginx for static file serving
+
 ## Setup Instructions
 
 ### 1) Install dependencies
