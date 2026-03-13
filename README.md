@@ -174,6 +174,39 @@ The Docker setup is production-ready with:
 - Proper security configurations
 - Nginx for static file serving
 
+## Cloud Deployment
+
+DevPulse can be deployed to various cloud platforms using the provided deployment tools.
+
+### Quick Deploy Scripts
+
+```bash
+# Test deployment locally
+./deploy.sh test
+
+# Deploy to DigitalOcean (easiest)
+./deploy.sh digitalocean
+
+# Deploy to Google Cloud
+./deploy.sh google
+```
+
+### Manual Deployment Options
+
+- **DigitalOcean App Platform**: Connect GitHub repo, auto-deploy
+- **Google Cloud Run**: Serverless containers, pay-per-use
+- **AWS ECS/Fargate**: Enterprise-grade, highly scalable
+- **Azure Container Apps**: Microsoft ecosystem integration
+
+### Health Monitoring
+
+```bash
+# Check if your deployed app is healthy
+./health-check.sh https://your-app-url.com
+```
+
+See `DEPLOYMENT.md` for detailed deployment guides and `docker-compose.prod.yml` for production configuration.
+
 ## Setup Instructions
 
 ### 1) Install dependencies
