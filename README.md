@@ -235,14 +235,6 @@ npm run client
 npm run build
 ```
 
-## Screenshots
-
-Add dashboard screenshots here:
-
-- `docs/screenshots/overview.png`
-- `docs/screenshots/charts.png`
-- `docs/screenshots/alerts.png`
-
 ## Future Improvements
 
 - Auth + role-based dashboards for teams.
